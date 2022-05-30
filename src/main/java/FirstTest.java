@@ -25,9 +25,11 @@ public class FirstTest {
         By firstname1 = By.xpath("//input[@data-qa-node='firstNamereceiver']");
         By lastname1 = By.xpath("//input[@data-qa-node='lastNamereceiver']");
         By amount = By.xpath("//input[@data-qa-node='amount']");
+        By currency = By.xpath("//button[@data-qa-value='UAH']");
+        By currencyUSD = By.xpath("//button[@data-qa-value='USD']");
         By commentclick = By.xpath("//span[@data-qa-node='toggle-comment']");
         By comment = By.xpath("//textarea[@data-qa-node='comment']");
-        By submitbtn = By.xpath("//button[@class='sc-VigVT hcHAAV']");
+       By submitbtn = By.xpath("//button[@class='sc-VigVT hcHAAV']");
 
 
 
@@ -41,6 +43,8 @@ public class FirstTest {
         driver.findElement(firstname1).sendKeys("Bobik");
         driver.findElement(lastname1).sendKeys("Bobovich");
         driver.findElement(amount).sendKeys("600");
+        driver.findElement(currency).click();
+        driver.findElement(currencyUSD).click();
         driver.findElement(commentclick).click();
         driver.findElement(comment).sendKeys("Переказ власних коштів");
         driver.findElement(submitbtn).click();
